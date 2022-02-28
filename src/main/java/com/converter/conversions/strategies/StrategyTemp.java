@@ -2,21 +2,21 @@ package com.converter.conversions.strategies;
 
 import com.converter.conversions.interfaces.UnitTemperatureConversions;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 
 public class StrategyTemp {
 
-    Logger StrategyTempLogger = (Logger) LogManager.getLogger("StrategyTempLogger");
+    private static final Logger loggerStratTemp = LogManager.getLogger(StrategyTemp.class);
 
     private UnitTemperatureConversions unitTemperatureConversions;
 
     public StrategyTemp(UnitTemperatureConversions unitTemperatureConversions){
-        StrategyTempLogger.trace("Constructor of StrategyTemp");
+        loggerStratTemp.trace("Constructor of StrategyTemp");
         this.unitTemperatureConversions = unitTemperatureConversions;
     }
 
     public void executeStrategy(){
-        StrategyTempLogger.trace("Executing StrategyTemp");
+        loggerStratTemp.trace("Executing StrategyTemp");
         unitTemperatureConversions.setTextFields(unitTemperatureConversions.convert());
     }
 

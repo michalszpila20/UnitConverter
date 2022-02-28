@@ -25,7 +25,6 @@ public class MassView extends JPanel{
 
     JButton buttonClearOne = new JButton("Clear");
 
-
     private static MassView instanceMass;
 
     public static MassView getMassView(){
@@ -113,117 +112,38 @@ public class MassView extends JPanel{
         layout.putConstraint(SpringLayout.NORTH, buttonTon, 130, SpringLayout.NORTH, MassView.this);
     }
 
-
-
-
-    public void setButtonKg(JButton button1){
-        this.buttonKg = button1;
-    }
-
-
     public JButton getButtonKg(){
         return buttonKg;
     }
-
     public JButton getButtonLbs(){
         return buttonLbs;
     }
-
-    public void setButtonLbs(JButton button2){
-
-        this.buttonLbs = button2;
-
-    }
-
-    public void setButtonOunce(JButton button3){
-
-        this.buttonOunce = button3;
-
-    }
-
     public JButton getButtonOunce(){
         return buttonOunce;
     }
-
-    public void setButtonGram(JButton button4){
-        this.buttonGram = button4;
-    }
-
     public JButton getButtonGram(){
         return buttonGram;
     }
-
-    public void setButtonTon(JButton button5){
-        this.buttonTon = button5;
-    }
-
     public JButton getButtonTon(){
         return buttonTon;
     }
-
-
-    public void setFirstTextField(JTextField text1){
-        this.textFieldKg = text1;
-    }
-
-    public JTextField getFirstTextField(){
-        return textFieldKg;
-    }
-
-    public JLabel getLabelKg() {
-        return labelKg;
-    }
-
-    public void setLabelKg(JLabel labelKg) {
-        this.labelKg = labelKg;
-    }
-
     public JTextField getTextFieldKg() {
         return textFieldKg;
     }
-
-    public void setTextFieldKg(JTextField textFieldKg) {
-        this.textFieldKg = textFieldKg;
-    }
-
     public JTextField getTextFieldLbs() {
         return textFieldLbs;
     }
-
-    public void setTextFieldLbs(JTextField textFieldLbs) {
-        this.textFieldLbs = textFieldLbs;
-    }
-
     public JTextField getTextFieldOunce() {
         return textFieldOunce;
     }
-
-    public void setTextFieldOunce(JTextField textFieldOunce) {
-        this.textFieldOunce = textFieldOunce;
-    }
-
     public JTextField getTextFieldGram() {
         return textFieldGram;
     }
-
-    public void setTextFieldGram(JTextField textFieldGram) {
-        this.textFieldGram = textFieldGram;
-    }
-
     public JTextField getTextFieldTon() {
         return textFieldTon;
     }
-
-    public void setTextFieldTon(JTextField textFieldTon) {
-        this.textFieldTon = textFieldTon;
-    }
-
     public JButton getButtonClearOne() {
         return buttonClearOne;
-    }
-
-    public void setButtonClearOne(JButton buttonClearOne) {
-        this.buttonClearOne = buttonClearOne;
     }
 
 }

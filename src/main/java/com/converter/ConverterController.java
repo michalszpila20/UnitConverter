@@ -19,6 +19,7 @@ import java.io.IOException;
 
 public class ConverterController {
 
+    private static final Logger loggerController = LogManager.getLogger(ConverterController.class);
     private final ConverterView view;
     private final MassView viewMass;
     private final CurrencyView viewCurr;
@@ -29,43 +30,48 @@ public class ConverterController {
         viewMass = vMass;
         viewCurr = vCurr;
         viewTemp = vTemp;
+        loggerController.trace("Inside ConverterController Constructor");
     }
-
-    final Logger logger = LogManager.getLogger(Converter.class);
 
     public void initController() {
 
         viewMass.getButtonKg().addActionListener(e -> {
             StrategyMass strategy = new StrategyMass(new ConvertFromKg());
             strategy.executeStrategy();
+            loggerController.trace("Action performed - ConvertKg");
         });
 
         viewMass.getButtonLbs().addActionListener(e -> {
             StrategyMass strategy = new StrategyMass(new ConvertFromLbs());
             strategy.executeStrategy();
+            loggerController.trace("Action performed - ConvertLbs");
         });
 
         viewMass.getButtonOunce().addActionListener(e -> {
             StrategyMass strategy = new StrategyMass(new ConvertFromOunce());
             strategy.executeStrategy();
+            loggerController.trace("Action performed - ConvertOunce");
         });
 
         viewMass.getButtonGram().addActionListener(e -> {
             StrategyMass strategy = new StrategyMass(new ConvertFromGram());
             strategy.executeStrategy();
+            loggerController.trace("Action performed - ConvertGram");
         });
 
         viewMass.getButtonTon().addActionListener(e -> {
             StrategyMass strategy = new StrategyMass(new ConvertFromTon());
             strategy.executeStrategy();
+            loggerController.trace("Action performed - ConvertTon");
         });
 
         viewCurr.getButtonPLN().addActionListener(e -> {
             StrategyCurrency strategy = new StrategyCurrency(new ConvertFromPLN());
             try {
                 strategy.executeStrategy();
+                loggerController.trace("Action performed - ConvertPLN");
             } catch (IOException ioException) {
-                ioException.printStackTrace();
+                loggerController.error("Fetching error from website, conversionFromPLN", ioException);
             }
         });
 
@@ -73,8 +79,9 @@ public class ConverterController {
             StrategyCurrency strategy = new StrategyCurrency(new ConvertFromUSD());
             try {
                 strategy.executeStrategy();
+                loggerController.trace("Action performed - ConvertUSD");
             } catch (IOException ioException) {
-                ioException.printStackTrace();
+                loggerController.error("Fetching error from website, conversionFromUSD", ioException);
             }
         });
 
@@ -82,8 +89,9 @@ public class ConverterController {
             StrategyCurrency strategy = new StrategyCurrency(new ConvertFromEUR());
             try {
                 strategy.executeStrategy();
+                loggerController.trace("Action performed - ConvertEUR");
             } catch (IOException ioException) {
-                ioException.printStackTrace();
+                loggerController.error("Fetching error from website, conversionFromEUR", ioException);
             }
         });
 
@@ -91,8 +99,9 @@ public class ConverterController {
             StrategyCurrency strategy = new StrategyCurrency(new ConvertFromGBP());
             try {
                 strategy.executeStrategy();
+                loggerController.trace("Action performed - ConvertGBP");
             } catch (IOException ioException) {
-                ioException.printStackTrace();
+                loggerController.error("Fetching error from website, conversionFromGBP", ioException);
             }
         });
 
@@ -100,34 +109,48 @@ public class ConverterController {
             StrategyCurrency strategy = new StrategyCurrency(new ConvertFromJPY());
             try {
                 strategy.executeStrategy();
+                loggerController.trace("Action performed - ConvertJPY");
             } catch (IOException ioException) {
-                ioException.printStackTrace();
+                loggerController.error("Fetching error from website, conversionFromJPY", ioException);
             }
         });
 
         viewTemp.getButtonCelsius().addActionListener(e -> {
             StrategyTemp strategyTemp = new StrategyTemp(new ConvertFromCelsius());
             strategyTemp.executeStrategy();
+            loggerController.trace("Action performed - ConvertCelsius");
         });
 
         viewTemp.getButtonKelvin().addActionListener(e -> {
             StrategyTemp strategyTemp = new StrategyTemp(new ConvertFromKelvin());
             strategyTemp.executeStrategy();
+            loggerController.trace("Action performed - ConvertKelvin");
         });
 
         viewTemp.getButtonFahrenheit().addActionListener(e -> {
             StrategyTemp strategyTemp = new StrategyTemp(new ConvertFromFahrenheit());
             strategyTemp.executeStrategy();
+            loggerController.trace("Action performed - ConvertFahrenheit");
         });
 
         viewTemp.getButtonRankine().addActionListener(e -> {
             StrategyTemp strategyTemp = new StrategyTemp(new ConvertFromRankine());
             strategyTemp.executeStrategy();
+            loggerController.trace("Action performed - ConvertRankine");
         });
 
-        viewMass.getButtonClearOne().addActionListener(e -> CleanUp.clearFirstPanel());
-        viewCurr.getButtonClearTwo().addActionListener(e -> CleanUp.clearSecondPanel());
-        viewTemp.getButtonClearThree().addActionListener(e -> CleanUp.clearThirdPanel());
+        viewMass.getButtonClearOne().addActionListener(e -> {
+            CleanUp.clearFirstPanel();
+            loggerController.trace("Action performed - Clear all TextFields in panel Mass");
+        });
+        viewCurr.getButtonClearTwo().addActionListener(e -> {
+            CleanUp.clearSecondPanel();
+            loggerController.trace("Action performed - Clear all TextFields in panel Currency");
+        });
+        viewTemp.getButtonClearThree().addActionListener(e -> {
+            CleanUp.clearThirdPanel();
+            loggerController.trace("Action performed - Clear all TextFields in panel Temperature");
+        });
     }
 
 }

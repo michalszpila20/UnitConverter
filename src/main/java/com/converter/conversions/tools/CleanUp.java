@@ -4,11 +4,11 @@ import com.converter.views.CurrencyView;
 import com.converter.views.MassView;
 import com.converter.views.TemperatureView;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 
 public class CleanUp {
 
-    static Logger CleanUpLogger = (Logger) LogManager.getLogger("CleanUpLogger");
+    private static final Logger loggerCleanUp = LogManager.getLogger(CleanUp.class);
 
     public static void clearFirstPanel() {
         MassView.getMassView().getTextFieldKg().setText("");
@@ -16,7 +16,7 @@ public class CleanUp {
         MassView.getMassView().getTextFieldOunce().setText("");
         MassView.getMassView().getTextFieldGram().setText("");
         MassView.getMassView().getTextFieldTon().setText("");
-        CleanUpLogger.trace("Cleared all TextFields in the first panel");
+        loggerCleanUp.trace("Cleared all TextFields in the first panel");
     }
 
     public static void clearSecondPanel() {
@@ -25,7 +25,7 @@ public class CleanUp {
         CurrencyView.getCurrView().getTextFieldEUR().setText("");
         CurrencyView.getCurrView().getTextFieldGBP().setText("");
         CurrencyView.getCurrView().getTextFieldJPY().setText("");
-        CleanUpLogger.trace("Cleared all TextFields in the second panel");
+        loggerCleanUp.trace("Cleared all TextFields in the second panel");
     }
 
     public static void clearThirdPanel() {
@@ -33,6 +33,6 @@ public class CleanUp {
         TemperatureView.getTempView().getTextFieldKelvin().setText("");
         TemperatureView.getTempView().getTextFieldFahrenheit().setText("");
         TemperatureView.getTempView().getTextFieldRankine().setText("");
-        CleanUpLogger.trace("Cleared all TextFields in the third panel");
+        loggerCleanUp.trace("Cleared all TextFields in the third panel");
     }
 }

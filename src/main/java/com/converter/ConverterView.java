@@ -47,16 +47,9 @@ public class ConverterView extends JFrame {
 
         tabbedPane.addTab("Temperature", null, panelTemperature, "Temperature conversion");
         tabbedPane.setMnemonicAt(0, KeyEvent.VK_2);
-
-
     }
 
     public JFrame getFrame() {
         return frame;
     }
-
-    public void setFrame(JFrame frame) {
-        this.frame = frame;
-    }
-
 }

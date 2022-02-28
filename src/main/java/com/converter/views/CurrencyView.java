@@ -68,7 +68,6 @@ public class CurrencyView extends JPanel {
         buttonGBP.setPreferredSize(new Dimension( 90, 19));
         buttonJPY.setPreferredSize(new Dimension( 90, 19));
 
-
         //Spring Layout
 
         SpringLayout layout = new SpringLayout();
@@ -118,92 +117,38 @@ public class CurrencyView extends JPanel {
 
     }
 
-    public void setButtonPLN(JButton button6){
-        this.buttonPLN = button6;
-    }
-
     public JButton getButtonPLN(){
         return buttonPLN;
     }
-
-    public void setButtonUSD(JButton button7){
-        this.buttonUSD = button7;
-    }
-
     public JButton getButtonUSD(){
         return buttonUSD;
     }
-
-    public void setButtonEUR(JButton button8){
-        this.buttonEUR = button8;
-    }
-
     public JButton getButtonEUR(){
         return buttonEUR;
     }
-
-    public void setButtonGBP(JButton button9){
-        this.buttonGBP = button9;
-    }
-
     public JButton getButtonGBP(){
         return buttonGBP;
     }
-
-    public void setButtonJPY(JButton button10){
-        this.buttonJPY = button10;
-    }
-
     public JButton getButtonJPY(){
         return buttonJPY;
     }
-
     public JButton getButtonClearTwo() {
         return buttonClearTwo;
     }
-
-    public void setButtonClearTwo(JButton buttonClearTwo) {
-        this.buttonClearTwo = buttonClearTwo;
-    }
-
     public JTextField getTextFieldPLN() {
         return textFieldPLN;
     }
-
-    public void setTextFieldPLN(JTextField textFieldPLN) {
-        this.textFieldPLN = textFieldPLN;
-    }
-
     public JTextField getTextFieldUSD() {
         return textFieldUSD;
     }
-
-    public void setTextFieldUSD(JTextField textFieldUSD) {
-        this.textFieldUSD = textFieldUSD;
-    }
-
     public JTextField getTextFieldEUR() {
         return textFieldEUR;
     }
-
-    public void setTextFieldEUR(JTextField textFieldEUR) {
-        this.textFieldEUR = textFieldEUR;
-    }
-
     public JTextField getTextFieldGBP() {
         return textFieldGBP;
     }
-
-    public void setTextFieldGBP(JTextField textFieldGBP) {
-        this.textFieldGBP = textFieldGBP;
-    }
-
     public JTextField getTextFieldJPY() {
         return textFieldJPY;
-    }
-
-    public void setTextFieldJPY(JTextField textFieldJPY) {
-        this.textFieldJPY = textFieldJPY;
     }
 
 }

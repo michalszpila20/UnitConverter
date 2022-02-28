@@ -1,24 +1,25 @@
 package com.converter.conversions.strategies;
 
 import com.converter.conversions.interfaces.UnitCurrencyConversion;
+import com.converter.conversions.mass.ConvertFromGram;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
 public class StrategyCurrency {
 
-    Logger StrategyCurrLogger = (Logger) LogManager.getLogger("StrategyCurrencyLogger");
+    private static final Logger loggerStratCurr = LogManager.getLogger(StrategyCurrency.class);
 
     private UnitCurrencyConversion unitCurrencyConversion;
 
     public StrategyCurrency(UnitCurrencyConversion unitCurrencyConversion){
-        StrategyCurrLogger.trace("Constructor of StrategyCurrency");
+        loggerStratCurr.trace("Constructor of StrategyCurrency");
         this.unitCurrencyConversion = unitCurrencyConversion;
     }
 
     public void executeStrategy() throws IOException {
-        StrategyCurrLogger.trace("Executing StrategyCurrency");
+        loggerStratCurr.trace("Executing StrategyCurrency");
         unitCurrencyConversion.convert();
     }
 }

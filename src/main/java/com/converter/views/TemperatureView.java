@@ -101,78 +101,31 @@ public class TemperatureView extends JPanel {
 
     }
 
-
-
-    public void setButtonCelsius(JButton button11){
-        this.buttonCelsius = button11;
-    }
-
     public JButton getButtonCelsius(){
         return buttonCelsius;
     }
-
-    public void setButtonKelvin(JButton button12){
-        this.buttonKelvin = button12;
-    }
-
     public JButton getButtonKelvin(){
         return buttonKelvin;
     }
-
-    public void setButtonFahrenheit(JButton button13){
-        this.buttonFahrenheit = button13;
-    }
-
     public JButton getButtonFahrenheit(){
         return buttonFahrenheit;
     }
-
-    public void setButtonRankine(JButton button14){
-        this.buttonRankine = button14;
-    }
-
     public JButton getButtonRankine(){
         return buttonRankine;
     }
-
-
     public JTextField getTextFieldCelsius() {
         return textFieldCelsius;
     }
-
-    public void setTextFieldCelsius(JTextField textFieldCelsius) {
-        this.textFieldCelsius = textFieldCelsius;
-    }
-
     public JTextField getTextFieldKelvin() {
         return textFieldKelvin;
     }
-
-    public void setTextFieldKelvin(JTextField textFieldKelvin) {
-        this.textFieldKelvin = textFieldKelvin;
-    }
-
     public JTextField getTextFieldFahrenheit() {
         return textFieldFahrenheit;
     }
-
-    public void setTextFieldFahrenheit(JTextField textFieldFahrenheit) {
-        this.textFieldFahrenheit = textFieldFahrenheit;
-    }
-
     public JTextField getTextFieldRankine() {
         return textFieldRankine;
     }
-
-    public void setTextFieldRankine(JTextField textFieldRankine) {
-        this.textFieldRankine = textFieldRankine;
-    }
-
     public JButton getButtonClearThree() {
         return buttonClearThree;
-    }
-
-    public void setButtonClearThree(JButton buttonClearThree) {
-        this.buttonClearThree = buttonClearThree;
     }
 }
